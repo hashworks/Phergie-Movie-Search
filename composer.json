@@ -1,13 +1,13 @@
 {
-    "name": "hashworks/PhergieMovieSearch",
-    "description": "Phergie plugin to search both IMDB & OMDB.",
-    "keywords": [ "phergie", "irc", "bot", "plugin", "omdb", "imdb" ],
+    "name": "hashworks/PhergieIsDownCheck",
+    "description": "Phergie plugin to check websites using downforeveryoneorjustme.com.",
+    "keywords": [ "phergie", "irc", "bot", "plugin", "downforeveryoneorjustme.com", "isup.me" ],
     "license": "GNU GPL v3.0",
     "support": {
         "email": "admin@hashworks.net",
         "irc": "irc://irc.freenode.net/phergie",
-        "issues": "https://github.com/hashworks/PhergieMovieSearch/issues",
-        "source": "https://github.com/hashworks/PhergieMovieSearch"
+        "issues": "https://github.com/hashworks/PhergieIsDownCheck/issues",
+        "source": "https://github.com/hashworks/PhergieIsDownCheck"
     },
     "minimum-stability": "dev",
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phergie\\Irc\\Plugin\\React\\IMDBSearch\\": "src"
+            "hashworks\\Phergie\\Plugin\\MovieSearch\\": "src"
         }
     }
 }
