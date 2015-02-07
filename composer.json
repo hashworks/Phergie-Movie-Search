@@ -1,0 +1,27 @@
+{
+    "name": "hashworks/PhergieMovieSearch",
+    "description": "Phergie plugin to search both IMDB & OMDB.",
+    "keywords": [ "phergie", "irc", "bot", "plugin", "omdb", "imdb" ],
+    "license": "GNU GPL v3.0",
+    "support": {
+        "email": "admin@hashworks.net",
+        "irc": "irc://irc.freenode.net/phergie",
+        "issues": "https://github.com/hashworks/PhergieMovieSearch/issues",
+        "source": "https://github.com/hashworks/PhergieMovieSearch"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "phergie/phergie-irc-bot-react": "~1",
+        "phergie/phergie-irc-plugin-react-command": "~1",
+        "wyrihaximus/phergie-http": "~2"
+
+    },
+    "suggest": {
+        "phergie/phergie-irc-plugin-react-commandhelp": "provides interactive help for commands"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phergie\\Irc\\Plugin\\React\\IMDBSearch\\": "src"
+        }
+    }
+}
