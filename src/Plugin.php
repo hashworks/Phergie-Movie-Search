@@ -1,12 +1,4 @@
 <?php
-/**
- * Phergie plugin for Search the IMDB. (https://github.com/hashworks/phergie-irc-plugin-react-moviesearch)
- *
- * @link https://github.com/hashworks/phergie-irc-plugin-react-moviesearch for the canonical source repository
- * @copyright Copyright (c) 2015 hashworks (https://hashworks.net)
- * @license https://raw.githubusercontent.com/hashworks/phergie-irc-plugin-react-moviesearch/master/LICENSE GNU GPL v3.0
- * @package hashworks\Phergie\Plugin\MovieSearch
- */
 
 namespace hashworks\Phergie\Plugin\MovieSearch;
 
