@@ -2,8 +2,6 @@
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin to search both IMDB & OMDB.
 
-[![Build Status](https://secure.travis-ci.org/hashworks/PhergieMovieSearch.png?branch=master)](http://travis-ci.org/hashworks/PhergieMovieSearch)
-
 ## Install
 
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
