@@ -1,4 +1,4 @@
-# hashworks/PhergieMovieSearch
+# PhergieMovieSearch
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin to search both IMDB & OMDB.
 
