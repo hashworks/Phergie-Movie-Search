@@ -130,7 +130,6 @@ class Plugin extends AbstractPlugin {
 	 */
 	public function handleCommand (Event $event, Queue $queue) {
 		if (preg_match("/^(?:(?<id>tt\\d{7})|(?<title>.+?)(?: (?<year>\\d{4}))?)(?: (?<info>" . join('|', array_map('preg_quote', $this->infos)) .  "))?$/", join(' ', $event->getCustomParams()), $matches)) {
-			var_dump($matches);
 			$matches = array_map('trim', $matches);
 
 			$info = '';
@@ -150,7 +149,6 @@ class Plugin extends AbstractPlugin {
 				$omdbApi->requestShortPlotLength(false);
 			}
 			if (isset($matches['title']) && !empty($matches['title'])) {
-				var_dump("three");
 				if (isset($matches['year']) && !empty($matches['year'])) {
 					if ($omdbApi->fetchDataByTitleAndYear($matches['title'], $matches['year'], $sucessCallback, $errorCallback)) return;
 				} else {
