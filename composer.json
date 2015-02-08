@@ -1,13 +1,13 @@
 {
-    "name": "hashworks/PhergieIsDownCheck",
-    "description": "Phergie plugin to check websites using downforeveryoneorjustme.com.",
-    "keywords": [ "phergie", "irc", "bot", "plugin", "downforeveryoneorjustme.com", "isup.me" ],
+    "name": "hashworks/phergie-plugin-movie-search",
+    "description": "Phergie plugin to search both IMDB & OMDB.",
+    "keywords": [ "phergie", "irc", "bot", "plugin", "imdb", "omdb" ],
     "license": "GNU GPL v3.0",
     "support": {
         "email": "admin@hashworks.net",
         "irc": "irc://irc.freenode.net/phergie",
-        "issues": "https://github.com/hashworks/PhergieIsDownCheck/issues",
-        "source": "https://github.com/hashworks/PhergieIsDownCheck"
+        "issues": "https://github.com/hashworks/PhergieMovieSearch/issues",
+        "source": "https://github.com/hashworks/PhergieMovieSearch"
     },
     "minimum-stability": "dev",
     "require": {

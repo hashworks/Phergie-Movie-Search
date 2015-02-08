@@ -7,7 +7,7 @@
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
 
 ```
-composer require hashworks/PhergieMovieSearch
+composer require hashworks/phergie-plugin-movie-search
 ```
 
 See Phergie documentation for more information on
