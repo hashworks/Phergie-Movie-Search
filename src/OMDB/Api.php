@@ -36,7 +36,7 @@ class Api {
 			return false;
 		}
 		$this->emitter->emit('http.request', [new Request([
-				'url'             => 'http://www.omdbapi.com/' . $parameter . '&r=json&v=1&plot=' . $this->plotLength,
+				'url'             => 'http://www.omdbapi.com/' . $parameter . '&type=movie&r=json&v=1&plot=' . $this->plotLength,
 				'resolveCallback' => function ($data) use ($successCallback, $errorCallback) {
 					$this->handleData($data, $successCallback, $errorCallback);
 				},
