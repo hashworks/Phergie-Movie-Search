@@ -111,6 +111,15 @@ class Plugin extends AbstractPlugin {
 								$data = $data['title_exact'];
 							} else return;
 
+								// Remove anything except movies
+							for($i = 0; $i < count($data); $i++) {
+								if (isset($data[$i]['description']) && preg_match('/(?:tv series|tv docu|video game)/i', $data[$i]['description'])) {
+									unset($data[$i]);
+								} elseif (isset($data[$i]['title_description']) && preg_match('/(?:tv series|tv docu|video game)/i', $data[$i]['title_description'])) {
+									unset($data[$i]);
+								}
+							}
+
 							$data = array_slice($data, 0, 5);
 							foreach ($data as $entry) {
 								$this->sendReply($event, $queue, $entry['title'] . ' [' . $entry['id'] . ']');
