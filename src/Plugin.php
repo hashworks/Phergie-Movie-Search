@@ -95,9 +95,14 @@ class Plugin extends AbstractPlugin {
 
 	public function handleSearchCommand (Event $event, Queue $queue) {
 		$query = join(' ', $event->getCustomParams());
+
+		$errorHandler = function($error) use ($event, $queue) {
+			$this->sendReply($event, $queue, $error);
+		};
+
 		$this->emitter->emit('http.request', [new Request([
 				'url'             => 'http://www.imdb.com/xml/find?json=1&jnr=1&tt=on&q=' . rawurlencode($query),
-				'resolveCallback' => function ($data, $headers, $code) use ($event, $queue, $query) {
+				'resolveCallback' => function ($data, $headers, $code) use ($event, $queue, $query, $errorHandler) {
 					if ($code == "302" && isset($headers['Location'])) {
 						$this->sendReply($event, $queue, $query . ' [' . explode('/', $headers['Location'])[4] . ']');
 					} else {
@@ -109,7 +114,7 @@ class Plugin extends AbstractPlugin {
 								$data = $data['title_popular'];
 							} elseif (isset($data['title_exact'])) {
 								$data = $data['title_exact'];
-							} else return;
+							}
 
 								// Remove anything except movies
 							for($i = 0; $i < count($data); $i++) {
@@ -121,15 +126,17 @@ class Plugin extends AbstractPlugin {
 							}
 
 							$data = array_slice($data, 0, 5);
-							foreach ($data as $entry) {
-								$this->sendReply($event, $queue, $entry['title'] . ' [' . $entry['id'] . ']');
+							if (!empty($data)) {
+								foreach ($data as $entry) {
+									$this->sendReply($event, $queue, $entry['title'] . ' [' . $entry['id'] . ']');
+								}
+								return;
 							}
 						}
+						$errorHandler('Nothing found!');
 					}
 				},
-				'rejectCallback'  => function($error) use ($event, $queue) {
-					$this->sendReply($event, $queue, $error);
-				}
+				'rejectCallback'  => $errorHandler
 		])]);
 	}
 
