@@ -128,7 +128,7 @@ class Plugin extends AbstractPlugin {
 							$data = array_slice($data, 0, 5);
 							if (!empty($data)) {
 								foreach ($data as $entry) {
-									$this->sendReply($event, $queue, $entry['title'] . ' [' . $entry['id'] . ']');
+									$this->sendReply($event, $queue, $entry['title'] . ' (http://www.imdb.com/title/' . $entry['id'] . '/)');
 								}
 								return;
 							}
