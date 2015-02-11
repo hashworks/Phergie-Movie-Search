@@ -145,7 +145,7 @@ class Plugin extends AbstractPlugin {
 	 * @param Queue $queue
 	 */
 	public function handleCommand (Event $event, Queue $queue) {
-		if (preg_match("/^(?:(?<id>tt\\d{7})|(?<title>.+?)(?: (?<year>\\d{4}))?)(?: (?<info>" . join('|', array_map('preg_quote', $this->infos)) .  "))?$/", join(' ', $event->getCustomParams()), $matches)) {
+		if (preg_match("/^(?:(?<id>tt\\d{7})|(?<title>.+?)(?: (?<year>\\d{4}))?)(?: (?<info>" . join('|', array_map('preg_quote', $this->infos)) .  "))?$/i", join(' ', $event->getCustomParams()), $matches)) {
 			$matches = array_map('trim', $matches);
 
 			$info = '';
