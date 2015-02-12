@@ -17,7 +17,8 @@
 
     },
     "suggest": {
-        "phergie/phergie-irc-plugin-react-commandhelp": "provides interactive help for commands"
+        "phergie/phergie-irc-plugin-react-commandhelp": "provides interactive help for commands",
+        "hashworks/phergie-message-splitter-plugin": "splits too long plots into multiple messages"
     },
     "autoload": {
         "psr-4": {
