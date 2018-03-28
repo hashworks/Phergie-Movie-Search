@@ -2,9 +2,9 @@
     "name": "hashworks/phergie-plugin-movie-search",
     "description": "Phergie plugin to search both IMDB & OMDB.",
     "keywords": [ "phergie", "irc", "bot", "plugin", "imdb", "omdb" ],
-    "license": "GNU GPL v3.0",
+    "license": "GPL-3.0-or-later",
     "support": {
-        "email": "admin@hashworks.net",
+        "email": "mail@hashworks.net",
         "irc": "irc://irc.freenode.net/phergie",
         "issues": "https://github.com/hashworks/PhergieMovieSearch/issues",
         "source": "https://github.com/hashworks/PhergieMovieSearch"
